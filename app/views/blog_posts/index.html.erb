@@ -1,8 +1,10 @@
-<h1>My Blog</h1>
-
-<% @blog_posts.each do |blog_post| %>
-  <div>
-    <h2><%= link_to blog_post.title, blog_post %></h2>
-    <%= blog_post.body %>
-  </div>
-<% end %>
+<div>
+  <% @blog_posts.each do |blog_post| %>
+    <%= link_to blog_post, class:'no-underline' do%>
+      <div class='block p-8 rounded-lg bg-gray-100 mb-4'>
+        <p class='text-2xl m-0 font-black'><%= blog_post.title %></p>
+        <p class='truncate m-0 text-base font-normal text-gray-500'><%= blog_post.body%></p>
+      </div>
+    <% end %>
+  <% end %>
+</div>

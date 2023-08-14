@@ -1,7 +1,7 @@
 <div>
   <% @blog_posts.each do |blog_post| %>
     <%= link_to blog_post, class:'no-underline' do%>
-      <div class='block p-8 rounded-lg bg-gray-100 mb-4'>
+      <div class='block p-8 rounded-lg bg-gray-100 mb-4 hover:border-indigo-600 border-2'>
         <p class='text-2xl m-0 font-black'><%= blog_post.title %></p>
         <p class='truncate m-0 text-base font-normal text-gray-500'><%= blog_post.body%></p>
       </div>
